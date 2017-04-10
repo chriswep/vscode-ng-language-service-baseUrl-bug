@@ -4,17 +4,23 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { NewCmpComponent } from 'app/new-cmp/new-cmp.component';
+
+import { MyNewServiceService } from 'app/services/my-new-service/my-new-service.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NewCmpComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    MyNewServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
